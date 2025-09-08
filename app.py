@@ -19,7 +19,7 @@ app.add_middleware(
 )
 
 # Load your trained YOLOv12 model
-model = YOLO(r"C:\Users\KEERTHAN\Desktop\finalpro\best.pt")  # Replace with your custom weights path
+model = YOLO(r"best.pt")  # Replace with your custom weights path
 
 # Directories
 UPLOAD_DIR = "uploads"
@@ -226,3 +226,4 @@ async def get_output_image(image_name: str):
 
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8000, reload=True)
+
